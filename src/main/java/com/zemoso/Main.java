@@ -29,13 +29,13 @@ public class Main {
 
         facebookPage.follow(FollowType.VIDEO, saiEmailNotification);
         facebookPage.follow(FollowType.LIVE_STREAM, saiEmailNotification);
-        facebookPage.follow(FollowType.LIVE_STREAM, saiAppNotification);
+        facebookPage.follow(FollowType.ARTICLE, saiAppNotification);
 
         // Notify
         facebookPage.startLiveStream("https://facbook.com/livestream");
-
-//        facebookPage.unfollow(FollowType.LIVE_STREAM, saiAppNotification);
-//
-//        facebookPage.startLiveStream("https://facebook.com/other-livestream");
+        facebookPage.publishVideo("https://facbook.com/video");
+        facebookPage.publishArticle("https://facbook.com/article");
+        facebookPage.unfollow(FollowType.LIVE_STREAM, saiAppNotification);
+        facebookPage.startLiveStream("https://facebook.com/other-livestream");
     }
 }
